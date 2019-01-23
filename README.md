@@ -100,8 +100,7 @@ You can look at the test so you can get a quick grasp of how to use it in direct
 | [loadHeadersToSysProperties](#loadHeadersToSysProperties) | When set to true it loads the response headers as system properties |
 | [loadHeadersPrefix](#responseHeadersPrefix) | When response headers are loaded as system properties, the name of those properties are prefixed whith this value to avoid name clashes |
 
-> - From all the parameters above, only *resourceUrl* is required.
-> - Notice that all file paths are relative
+> From all the parameters above, only *resourceUrl* is required.
 
 ### method
 HTTP method to  perform. e.g. *GET*, *POST*, *PUT*, *DELETE*, etc. Non-standard HTTP methods can be specified i.e. *SUBMIT* (as long as the server supports it)

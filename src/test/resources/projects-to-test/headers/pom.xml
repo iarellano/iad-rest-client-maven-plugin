@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.iarellano</groupId>
+    <artifactId>iad-rest-client-get-maven-plugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Test MyMojo</name>
+
+    <parent>
+        <groupId>com.github.iarellano</groupId>
+        <artifactId>iad-rest-client-maven-plugin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.iarellano</groupId>
+                <artifactId>iad-rest-client-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+
+                <configuration>
+                    <resourceUrl>${target.scheme}://${target.host}:${target.port}/headers</resourceUrl>
+                    <method>GET</method>
+                    <responseOutput>headers.json</responseOutput>
+                    <headers>
+                        <Content-Type>application/json</Content-Type>
+                        <Language>Mexican Spanish</Language>
+                    </headers>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,8 @@
+server.port=${test.server.ssl.port}
+server.ssl.client-auth=need
+server.ssl.key-alias=ssl-server
+server.ssl.key-password=password
+server.ssl.key-store=src/test/resources/ssl-server.jks
+server.ssl.key-store-provider=SUN
+server.ssl.key-store-type=JKS
+javax.net.debug=${test.javax.net.debug}

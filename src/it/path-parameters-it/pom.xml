@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.iarellano.it</groupId>
+    <artifactId>simple-it</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <description>A simple IT verifying URL template with path parameters.</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.iarellano</groupId>
+                <artifactId>iad-rest-client-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>path-parameters-test</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>http-request</goal>
+                        </goals>
+                        <configuration>
+                            <resourceUrl>https://httpbin.org/anything/{path.segment2}/{path.segment3}</resourceUrl>
+                            <pathParameters>
+                                <path.segment2>second-level-path</path.segment2>
+                                <path.segment3>third-level-path</path.segment3>
+                            </pathParameters>
+                            <responseOutput>target/path-parameters.json</responseOutput>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

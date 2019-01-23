@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.iarellano.it</groupId>
+    <artifactId>simple-it</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <description>A simple IT verifying any content submit.</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.iarellano</groupId>
+                <artifactId>iad-rest-client-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>payload-test</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>http-request</goal>
+                        </goals>
+                        <configuration>
+                            <resourceUrl>https://httpbin.org/anything</resourceUrl>
+                            <method>POST</method>
+                            <headers>
+                                <Content-Type>application/json</Content-Type>
+                            </headers>
+                            <payload>{"firstName": "John", "lastName": "Connor"}</payload>
+                            <responseOutput>target/payload-test.json</responseOutput>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

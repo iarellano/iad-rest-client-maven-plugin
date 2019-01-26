@@ -381,6 +381,8 @@ curl -X POST 'https://httpbin.org/post' \
 [Go to Configuration parameters list](#Configuration)
 
 ### file
+It is relative to pom.xml
+
 |                   |                                 |
 | ----------------- | ------------------------------- |
 | Required          | No                              |
@@ -401,7 +403,7 @@ Example:
 [Go to Configuration parameters list](#Configuration)
 
 ### responseOutput
-Sets the file to persist the response body
+Sets the file to persist the response body. It is relative to pom.xml
 
 |                   |                      |
 | ----------------- | -------------------- |
@@ -422,7 +424,7 @@ curl -X GET 'https://httpbin.org/get' -o target/get.json
 [Go to Configuration parameters list](#Configuration)
 
 ### headersOutput
-Sets the file to persist the response headers, headers are persisted as properties. e.g. ContentType=application/json
+Sets the file to persist the response headers, headers are persisted as properties. e.g. ContentType=application/json. It is relative to pom.xml
 
 |                   |                      |
 | ----------------- | -------------------- |

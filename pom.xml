@@ -4,7 +4,7 @@
 
     <groupId>com.github.iarellano</groupId>
     <artifactId>iad-rest-client-maven-plugin</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
     <name>REST Client Maven Plugin</name>

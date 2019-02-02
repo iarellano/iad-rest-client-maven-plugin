@@ -1,4 +1,8 @@
 # iad-rest-client-maven-plugin
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.iarellano/iad-rest-client-maven-plugin.svg)](https://mvnrepository.com/artifact/com.github.iarellano/iad-rest-client-maven-plugin) 
+
 ## REST Client maven plugin
 At times we need to consume external services as part of a build process, for example to verify which version of an API is deployed, verify that a service is online, get configurations from some remote storage provider, etc.
  
@@ -44,7 +48,7 @@ You can look at the test so you can get a quick grasp of how to use it in direct
         <plugin>
             <groupId>com.github.iarellano</groupId>
             <artifactId>iad-rest-client-maven-plugin</artifactId>
-            <version>1.0</version>
+            <version>1.0.1</version>
             <executions>
                 <execution>
                     <id>post-json</id>

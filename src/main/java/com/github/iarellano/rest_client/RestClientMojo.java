@@ -152,8 +152,8 @@ public class RestClientMojo
             }
             URL url = new URL(targetUrl);
             if ("https".equals(url.getProtocol()) && !validateServerCert) {
-                installSslSkipVerification();
                 defaultHostNameVerifier = HttpsURLConnection.getDefaultHostnameVerifier();
+                installSslSkipVerification();
             }
 
             HttpURLConnection.setFollowRedirects(followRedirect);

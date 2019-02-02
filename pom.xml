@@ -4,7 +4,7 @@
 
     <groupId>com.github.iarellano</groupId>
     <artifactId>iad-rest-client-maven-plugin</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>maven-plugin</packaging>
 
     <name>REST Client Maven Plugin</name>
@@ -54,7 +54,7 @@
         <connection>scm:git:git@github.com:iarellano/iad-rest-client-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:iarellano/iad-rest-client-maven-plugin.git</developerConnection>
         <url>https://github.com/iarellano/iad-rest-client-maven-plugin</url>
-        <tag>HEAD</tag>
+        <tag>iad-rest-client-maven-plugin-1.0.1</tag>
     </scm>
 
     <properties>
